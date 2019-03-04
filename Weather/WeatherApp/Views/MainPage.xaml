@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:i18n="clr-namespace:WeatherApp;assembly=WeatherApp"
+             xmlns:validator="clr-namespace:WeatherApp.Behaviors"
+             xmlns:renderer="clr-namespace:WeatherApp.CustomRenderers;assembly=WeatherApp"
+             xmlns:controls="clr-namespace:WeatherApp.Controls"
+             x:Class="WeatherApp.Views.MainPage">  
+    <StackLayout HorizontalOptions="Start">
+        <Grid BackgroundColor="#545454" 
+              Padding="10,10,10,10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="30" />
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            
+            <Label Text="{i18n:Translate MainPage_LblTitle}" 
+                   Grid.ColumnSpan="3"
+                   HorizontalOptions="Center"
+                   TextColor="White" 
+                   FontAttributes="Bold" 
+                   FontSize="Medium" />
+            
+            <Label Text="{i18n:Translate MainPage_LblCity}" 
+                   Grid.Row="1" 
+                   VerticalOptions="Center"
+                   Style="{StaticResource labelStyle}"
+                   TextColor="#C0C0C0"/>
+
+            <renderer:CustomEntry x:Name="_cityEntry"
+                   Placeholder="{i18n:Translate MainPage_PlaceHolderCity}" 
+                   PlaceholderColor="White"
+                   AutomationId="entryCity"
+                   Grid.Row="1" 
+                   Grid.Column="1"
+                   Margin="5,0"
+                   VerticalOptions="Center"
+                   BackgroundColor="DarkSalmon"
+                   TextColor="White"
+                   Text="{Binding Search.City, Mode=TwoWay}">
+                <Entry.Behaviors>
+                    <validator:EntryValidatorBehavior x:Name="CodeValidator"/>
+                </Entry.Behaviors>
+            </renderer:CustomEntry>
+            
+            <renderer:CustomButton x:Name="btnCity" 
+                    Grid.Row="1" 
+                    FontSize="Micro" 
+                    Padding="5,0"  
+                    AutomationId="btnCity"
+                    Grid.Column="2" 
+                    Text="{i18n:Translate MainPage_BtnGet}" 
+                    BorderWidth="1"
+                    BorderColor="White"
+                    BackgroundColor="DarkGray"
+                    TextColor="White"
+                    Command="{Binding SearchCommand}"
+                    CommandParameter="{Binding Search}">
+                <Button.Triggers>
+                <DataTrigger TargetType="Button" 
+                             Binding="{Binding Source={x:Reference CodeValidator}, Path=IsValid}" 
+                             Value="True"> 
+                    <Setter Property="IsEnabled" Value="True" />
+                </DataTrigger>
+                <DataTrigger TargetType="Button" 
+                             Binding="{Binding Source={x:Reference CodeValidator}, Path=IsValid}" 
+                             Value="False"> 
+                    <Setter Property="IsEnabled" Value="False" />
+                </DataTrigger>
+                </Button.Triggers>
+            </renderer:CustomButton>
+        </Grid>
+
+        <ScrollView>
+            <StackLayout x:Name="ContainerStackLayout" Padding="10">
+                <Label Text="{i18n:Translate MainPage_LblLocation}" 
+                       Style="{StaticResource labelStyle}" />
+                <Label Text="{Binding CityWeather.Title, Mode=TwoWay}" 
+                       Style="{StaticResource labelResultStyle}" 
+                       AutomationId="lblCity" />
+                <Label Text="{i18n:Translate MainPage_LblTemperature}" 
+                       Style="{StaticResource labelStyle}" />
+                <Label Text="{Binding CityWeather.Temperature, Mode=TwoWay}" 
+                       Style="{StaticResource labelResultStyle}" />
+                <Label Text="{i18n:Translate MainPage_LblWindSpeed}" 
+                       Style="{StaticResource labelStyle}" />
+                <Label Text="{Binding CityWeather.Speed, Mode=TwoWay}" 
+                       Style="{StaticResource labelResultStyle}" />
+                <Label Text="{i18n:Translate MainPage_LblHumidity}" 
+                       Style="{StaticResource labelStyle}" />
+                <Label Text="{Binding CityWeather.Humidity, Mode=TwoWay}" 
+                       Style="{StaticResource labelResultStyle}" />
+                <Label Text="{i18n:Translate MainPage_LblVisibility}" 
+                       Style="{StaticResource labelStyle}" />
+                <Label Text="{Binding CityWeather.Visibility, Mode=TwoWay}" 
+                       Style="{StaticResource labelResultStyle}" />
+                <Label Text="{i18n:Translate MainPage_LblSunrise}" 
+                       Style="{StaticResource labelStyle}" />
+                <Label Text="{Binding CityWeather.Sunrise, Converter={StaticResource longToDateTimeConverter}, Mode=TwoWay}" 
+                       Style="{StaticResource labelResultStyle}" />
+                <Label Text="{i18n:Translate MainPage_LblSunset}" 
+                       Style="{StaticResource labelStyle}" />
+                <Label Text="{Binding CityWeather.Sunset, Converter={StaticResource longToDateTimeConverter}, Mode=TwoWay}" 
+                       Style="{StaticResource labelResultStyle}" />
+            </StackLayout>
+        </ScrollView>
+        <Grid VerticalOptions="EndAndExpand" BackgroundColor="Silver" Padding="10,10,10,10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            
+            <controls:ControlEmailEntry Text=""/>
+        </Grid>
+    </StackLayout>    
+</ContentPage>

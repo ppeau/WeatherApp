@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>2.0</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <data name="MainPage_LblTitle" xml:space="preserve">
+        <value>Search by City</value>
+    </data>
+    <data name="MainPage_LblCity" xml:space="preserve">
+        <value>City :</value>
+    </data>
+    <data name="MainPage_PlaceHolderCity" xml:space="preserve">
+        <value>Enter a valid city</value>
+    </data>
+    <data name="MainPage_PlaceHolderEmail" xml:space="preserve">
+        <value>Enter a valid email</value>
+    </data>
+    <data name="MainPage_lblInvalidEmail" xml:space="preserve">
+        <value>invalid email address</value>
+    </data>
+    <data name="MainPage_BtnGet" xml:space="preserve">
+        <value>Get Weather</value>
+    </data>
+    <data name="MainPage_LblLocation" xml:space="preserve">
+        <value>Location</value>
+    </data>
+    <data name="MainPage_LblTemperature" xml:space="preserve">
+        <value>Temperature</value>
+    </data>
+    <data name="MainPage_LblWindSpeed" xml:space="preserve">
+        <value>Wind Speed</value>
+    </data>
+    <data name="MainPage_LblHumidity" xml:space="preserve">
+        <value>Humidity</value>
+    </data>
+    <data name="MainPage_LblVisibility" xml:space="preserve">
+        <value>Visibility</value>
+    </data>
+    <data name="MainPage_LblSunrise" xml:space="preserve">
+        <value>Time of Sunrise</value>
+    </data>
+    <data name="MainPage_LblSunset" xml:space="preserve">
+        <value>Time of Sunset</value>
+    </data>
+</root>

@@ -1,0 +1,11 @@
+/Users/ppeau/Desktop/Weather/WeatherApp.UITest/bin/Debug/WeatherApp.UITest.dll
+/Users/ppeau/Desktop/Weather/WeatherApp.UITest/bin/Debug/WeatherApp.UITest.pdb
+/Users/ppeau/Desktop/Weather/WeatherApp.UITest/bin/Debug/nunit.framework.dll
+/Users/ppeau/Desktop/Weather/WeatherApp.UITest/bin/Debug/Xamarin.UITest.dll
+/Users/ppeau/Desktop/Weather/WeatherApp.UITest/bin/Debug/nunit.framework.xml
+/Users/ppeau/Desktop/Weather/WeatherApp.UITest/bin/Debug/Xamarin.UITest.xml
+/Users/ppeau/Desktop/Weather/WeatherApp.UITest/obj/Debug/WeatherApp.UITests.csprojAssemblyReference.cache
+/Users/ppeau/Desktop/Weather/WeatherApp.UITest/obj/Debug/WeatherApp.UITests.csproj.CoreCompileInputs.cache
+/Users/ppeau/Desktop/Weather/WeatherApp.UITest/obj/Debug/WeatherApp.UITests.csproj.CopyComplete
+/Users/ppeau/Desktop/Weather/WeatherApp.UITest/obj/Debug/WeatherApp.UITest.dll
+/Users/ppeau/Desktop/Weather/WeatherApp.UITest/obj/Debug/WeatherApp.UITest.pdb

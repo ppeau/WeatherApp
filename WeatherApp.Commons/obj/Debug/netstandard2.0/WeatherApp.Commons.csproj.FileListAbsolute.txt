@@ -1,0 +1,9 @@
+/Users/ppeau/Desktop/Weather/WeatherApp.Commons/bin/Debug/netstandard2.0/WeatherApp.Commons.deps.json
+/Users/ppeau/Desktop/Weather/WeatherApp.Commons/bin/Debug/netstandard2.0/WeatherApp.Commons.dll
+/Users/ppeau/Desktop/Weather/WeatherApp.Commons/bin/Debug/netstandard2.0/WeatherApp.Commons.pdb
+/Users/ppeau/Desktop/Weather/WeatherApp.Commons/obj/Debug/netstandard2.0/WeatherApp.Commons.csprojAssemblyReference.cache
+/Users/ppeau/Desktop/Weather/WeatherApp.Commons/obj/Debug/netstandard2.0/WeatherApp.Commons.csproj.CoreCompileInputs.cache
+/Users/ppeau/Desktop/Weather/WeatherApp.Commons/obj/Debug/netstandard2.0/WeatherApp.Commons.AssemblyInfoInputs.cache
+/Users/ppeau/Desktop/Weather/WeatherApp.Commons/obj/Debug/netstandard2.0/WeatherApp.Commons.AssemblyInfo.cs
+/Users/ppeau/Desktop/Weather/WeatherApp.Commons/obj/Debug/netstandard2.0/WeatherApp.Commons.dll
+/Users/ppeau/Desktop/Weather/WeatherApp.Commons/obj/Debug/netstandard2.0/WeatherApp.Commons.pdb

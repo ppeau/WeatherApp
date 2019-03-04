@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>get-task-allow</key>
+	<true/>
+	<key>application-identifier</key>
+	<string>GXJ8GVWDRD.com.8beats.WeatherApp</string>
+	<key>com.apple.developer.team-identifier</key>
+	<string>Y85HP4LSJ9</string>
+</dict>
+</plist>

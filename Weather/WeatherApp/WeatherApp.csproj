@@ -1,0 +1,70 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+	<AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects> 
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>pdbonly</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+	<AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects> 
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Forms" Version="3.5.0.129452" />
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
+    <PackageReference Include="Autofac" Version="4.9.1" />
+    <PackageReference Include="Autofac.Extras.CommonServiceLocator" Version="5.0.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Helpers\" />
+    <Folder Include="Models\" />
+    <Folder Include="Views\" />
+    <Folder Include="ViewModels\" />
+    <Folder Include="Models\ValueConverters\" />
+    <Folder Include="ViewModels\Commands\" />
+    <Folder Include="ViewModels\Commands\Interfaces\" />
+    <Folder Include="Bootstrapping\" />
+    <Folder Include="Bootstrapping\Module\" />
+    <Folder Include="Factories\" />
+    <Folder Include="ViewModels\Bases\" />
+    <Folder Include="Factories\Interfaces\" />
+    <Folder Include="ViewModels\Bases\Interfaces\" />
+    <Folder Include="Resources\" />
+    <Folder Include="Resources\Extensions\" />
+    <Folder Include="Models\Bases\" />
+    <Folder Include="Models\Bases\Interfaces\" />
+    <Folder Include="Models\Interfaces\" />
+    <Folder Include="Behaviors\" />
+    <Folder Include="CustomRenderers\" />
+    <Folder Include="Controls\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\WeatherApp.Commons\WeatherApp.Commons.csproj" />
+    <ProjectReference Include="..\..\Models\WeatherApp.Models.csproj" />
+    <ProjectReference Include="..\..\Services\WeatherApp.Services.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Bootstrapper.cs" />
+    <Compile Remove="ViewModels\ViewModelLocator.cs" />
+    <Compile Remove="AutofacConfig.cs" />
+    <Compile Remove="Localizations\AppResources.Designer.cs" />
+    <Compile Remove="Resouces\AppResources.Designer.cs" />
+    <Compile Remove="Behaviors\EntryEmptyValidator.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Remove="Resouces\AppResources.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="Resources\AppResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AppResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Resources\AppResources.Designer.cs">
+      <DependentUpon>AppResources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+</Project>
