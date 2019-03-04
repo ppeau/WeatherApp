@@ -1,13 +1,9 @@
 Weather App 
 =================
 
-![](name-of-giphy.gif)
+![](ezgif.com-crop.gif)
 
-![](name-of-giphy.gif)
-
-![Alt Text](https://gifyu.com/image/3wbl)
-
-![Alt Text](https://gifyu.com/image/3wbu)
+![](ezgif.com-crop(2).gif)
 
 
 
